@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Лимонные девочки — Горячие подборки 18+</title>
+  <meta name="description" content="Лимонные девочки — лучшие горячие подборки, фото и истории для взрослых. Вход только для 18+."/>
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --panel:#0f1720;
+      --text:#e6eef8;
+      --muted:#9aa6b2;
+      --accent:#ffcc00;
+      --accent-dark:#f2b800;
+      --card:#0f1725;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{
+      background: radial-gradient(800px 400px at 10% 10%, rgba(255,204,0,0.02), transparent),
+                  linear-gradient(180deg,#040406, #07111a);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.45;
+      overflow-y:auto;
+    }
+
+    header{
+      position:sticky;top:0;z-index:50;
+      background: linear-gradient(180deg, rgba(11,11,13,0.85), rgba(11,11,13,0.6));
+      border-bottom: 1px solid rgba(255,255,255,0.02);
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 20px;
+      backdrop-filter: blur(6px);
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:46px;height:46px;border-radius:10px;
+      background: linear-gradient(135deg,var(--accent),var(--accent-dark));
+      display:inline-flex;align-items:center;justify-content:center;
+      color:#081018;font-weight:900;font-size:18px;box-shadow:0 8px 20px rgba(255,204,0,0.06);
+    }
+    .brand-name{font-weight:800;letter-spacing:0.2px}
+    .brand-sub{font-size:12px;color:var(--muted);margin-top:2px}
+
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a:hover{color:var(--accent);background:rgba(255,204,0,0.04)}
+    .header-actions{display:flex;gap:10px;align-items:center}
+
+    .container{max-width:var(--maxw);margin:22px auto;padding:0 16px}
+
+    .hero{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+    .hero-left{flex:1}
+    .hero h1{margin:0;font-size:28px;color:var(--text)}
+    .hero p.lead{margin:8px 0;color:var(--muted)}
+    .hero-actions{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+    .btn{padding:10px 14px;border-radius:10px;border:0;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-dark));color:#081018}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    @media (max-width:980px){ .grid{grid-template-columns:1fr} }
+
+    .catalog{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+    @media (max-width:980px){ .catalog{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:520px){ .catalog{grid-template-columns:1fr} }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,0.02);
+      box-shadow: 0 8px 30px rgba(3,6,12,0.35);
+    }
+    .thumb{
+      height:160px;background:linear-gradient(135deg,#222,#111);
+      display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700;font-size:14px;
+      position:relative;
+    }
+    .thumb::after{
+      content:"";position:absolute;inset:0;background:
+      linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.25));
+    }
+    .card-body{padding:12px}
+    .title{font-weight:800;color:var(--text);margin-bottom:6px}
+    .meta{font-size:13px;color:var(--muted);margin-bottom:10px}
+    .card-actions{display:flex;gap:8px}
+
+    .sidebar .ad{
+      background:linear-gradient(180deg,#10161b,#0b1115);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)
+    }
+    .ad h4{margin:0 0 8px 0}
+    .ad p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{margin-top:26px;padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+
+    #ageGate{
+      position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(2,6,23,0.85), rgba(2,6,23,0.95));
+      z-index:9999;padding:20px;
+    }
+    .age-box{background:linear-gradient(180deg,#0f1720,#0b0f13);padding:28px;border-radius:14px;text-align:center;max-width:420px;width:100%;box-shadow:0 20px 60px rgba(2,6,23,0.6)}
+    .age-box h2{margin:0 0 8px 0}
+    .age-box p{color:var(--muted);margin-bottom:18px}
+    .age-btns{display:flex;gap:10px;justify-content:center}
+    .age-no{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:10px}
+    .age-yes{background:var(--accent);color:#081018;padding:10px 14px;border-radius:10px;border:0;font-weight:800}
+
+    .muted{color:var(--muted);font-size:13px}
+    .badge{background:rgba(255,204,0,0.12);color:var(--accent);padding:6px 8px;border-radius:8px;font-weight:700;font-size:13px}
+
+    @media (max-width:520px){
+      .hero h1{font-size:20px}
+      .logo{width:40px;height:40px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- AGE GATE -->
+  <div id="ageGate" role="dialog" aria-modal="true" aria-label="Подтвердите возраст">
+    <div class="age-box" role="document">
+      <div style="display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:12px">
+        <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:#081018;font-weight:900">ЛД</div>
+        <div style="text-align:left">
+          <h2 style="margin:0">Лимонные девочки</h2>
+          <div class="muted" style="margin-top:4px">Контент 18+ — доступ только для взрослых</div>
+        </div>
+      </div>
+      <p>Подтвердите, что вам исполнилось 18 лет и вы принимаете правила просмотра материалов.</p>
+      <div class="age-btns">
+        <button class="age-no" id="ageNo">Мне меньше 18</button>
+        <button class="age-yes" id="ageYes">Мне 18 или больше</button>
+      </div>
+      <p class="muted" style="margin-top:12px;font-size:12px">Продолжая, вы подтверждаете своё совершеннолетие.</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="brand" aria-hidden>
+      <div class="logo">ЛД</div>
+      <div>
+        <div class="brand-name">Лимонные девочки</div>
+        <div class="brand-sub">Самые горячие подборки и фото 18+</div>
+      </div>
+    </div>
+
+    <nav aria-label="Главное меню">
+      <a href="#catalog">Горячее</a>
+      <a href="#about">О проекте</a>
+      <a href="#ads">Реклама</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="badge">Топ дня</div>
+      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Рекламa & сотрудничество</button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container" id="mainContent" aria-live="polite">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Добро пожаловать на Лимонные девочки — горячие подборки 18+</h1>
+        <p class="lead">У нас — эксклюзивные подборки, пикантные фотосеты и истории, которые подогреют вечером. Выбор лучших материалов от редакции и сообщества.</p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="scrollToSection('catalog')">Открыть подборки</button>
+          <button class="btn btn-ghost" onclick="openPromo()">Спецпредложения</button>
+          <button class="btn" onclick="openContact()">Связаться</button>
+        </div>
+      </div>
+
+      <aside style="width:320px">
+        <div class="ad card" id="ads" style="margin-bottom:12px">
+          <h4>Промо</h4>
+          <p class="muted">Размещаем промо-баннеры, партнёрские предложения и брендированные подборки. Контакты для размещения — ниже.</p>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <button class="btn btn-primary" onclick="openPromo()">Заказать промо</button>
+            <button class="btn btn-ghost" onclick="openContact()">Контакты</button>
+          </div>
+        </div>
+
+        <div class="card" style="padding:12px;text-align:center">
+          <div style="font-weight:800;color:var(--accent)">Рекомендуем</div>
+          <div class="muted" style="margin-top:8px">Подборка дня: горячие лимоны — не пропусти</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalog">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <h2 style="margin:0">Горячие подборки</h2>
+        <div class="muted">Сортировка: <select id="sort" onchange="applySort(this.value)"><option value="new">Новое</option><option value="popular">Популярное</option></select></div>
+      </div>
+
+      <div class="catalog" id="catalogGrid" aria-live="polite">
+        <!-- Card 1 -->
+        <article class="card" role="article">
+          <div class="thumb" aria-hidden>
+            <span>Дикая ночь</span>
+          </div>
+          <div class="card-body">
+            <div class="title">Дикая ночь</div>
+            <div class="meta">Портреты · Ночная серия · 18+</div>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="openViewer('Дикая ночь')">Просмотр</button>
+              <button class="btn" onclick="saveItem('Дикая ночь')">Сохранить</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" role="article">
+          <div class="thumb">
+            <span>Лимонный закат</span>
+          </div>
+          <div class="card-body">
+            <div class="title">Лимонный закат</div>
+            <div class="meta">Сочные кадры · Стильный сет · 18+</div>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="openViewer('Лимонный закат')">Просмотр</button>
+              <button class="btn" onclick="saveItem('Лимонный закат')">Сохранить</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" role="article">
+          <div class="thumb">
+            <span>Ночная лимонада</span>
+          </div>
+          <div class="card-body">
+            <div class="title">Ночная лимонада</div>
+            <div class="meta">Эксклюзивные фотосеты · 18+</div>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="openViewer('Ночная лимонада')">Просмотр</button>
+              <button class="btn" onclick="saveItem('Ночная лимонада')">Сохранить</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card" role="article">
+          <div class="thumb"><span>Лимонный калейдоскоп</span></div>
+          <div class="card-body">
+            <div class="title">Лимонный калейдоскоп</div>
+            <div class="meta">Сеты и подборки · 18+</div>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="openViewer('Лимонный калейдоскоп')">Просмотр</button>
+              <button class="btn" onclick="saveItem('Лимонный калейдоскоп')">Сохранить</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card" role="article">
+          <div class="thumb"><span>Цитрус вечеринка</span></div>
+          <div class="card-body">
+            <div class="title">Цитрус вечеринка</div>
+            <div class="meta">Горячие подборки · 18+</div>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="openViewer('Цитрус вечеринка')">Просмотр</button>
+              <button class="btn" onclick="saveItem('Цитрус вечеринка')">Сохранить</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card" role="article">
+          <div class="thumb"><span>Тропический лимон</span></div>
+          <div class="card-body">
+            <div class="title">Тропический лимон</div>
+            <div class="meta">Пикантные кадры · 18+</div>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="openViewer('Тропический лимон')">Просмотр</button>
+              <button class="btn" onclick="saveItem('Тропический лимон')">Сохранить</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="card" style="margin-top:18px;padding:16px">
+      <h2 style="margin-top:0">О проекте</h2>
+      <p class="muted">«Лимонные девочки» — это персональный проект с отборными подборками для взрослых. Мы собираем самые яркие фотосеты и истории, которые нравятся нашей аудитории. Все материалы помечены как 18+. Сайт поддерживается лично администратором и открывает доступ к новым подборкам ежедневно.</p>
+    </section>
+
+    <!-- Ads / Promo -->
+    <section id="ads" style="margin-top:14px">
+      <div class="card" style="padding:14px">
+        <h2 style="margin:0 0 8px 0">Реклама и сотрудничество</h2>
+        <p class="muted">Размещаем промо-материалы, спецпроекты и рекламные подборки. За интересными предложениями обращайтесь по контактам ниже.</p>
+        <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+          <button class="btn btn-primary" onclick="openContact()">Заказать размещение</button>
+          <button class="btn btn-ghost" onclick="openContact()">Условия</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card" style="margin-top:14px;padding:16px">
+      <h2 style="margin-top:0">Контакты</h2>
+      <p class="muted">По всем вопросам сотрудничества и рекламе пиши напрямую:</p>
+      <p><a href="https://t.me/Doctor2249" target="_blank" rel="noopener" style="color:var(--accent)">@Doctor2249</a></p>
+      <p class="muted" style="margin-top:8px">Администрирование и поддержка — лично.</p>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> Лимонные девочки — Все права защищены.
+    </footer>
+  </main>
+
+  <!-- Viewer modal -->
+  <div id="viewerBackdrop" style="display:none;position:fixed;inset:0;background:rgba(2,6,23,0.7);z-index:9998;align-items:center;justify-content:center;padding:16px">
+    <div style="max-width:900px;width:100%;background:linear-gradient(180deg,#081018,#071018);border-radius:12px;padding:18px;color:var(--text);box-shadow:0 20px 60px rgba(2,6,23,0.6);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <strong id="viewerTitle">Просмотр подборки</strong>
+        <button onclick="closeViewer()" style="background:transparent;border:0;color:var(--muted);font-size:18px;cursor:pointer">✕</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px">
+        <div style="height:160px;background:linear-gradient(135deg,#222,#111);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Фото 1</div>
+        <div style="height:160px;background:linear-gradient(135deg,#2a2a20,#121217);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Фото 2</div>
+        <div style="height:160px;background:linear-gradient(135deg,#231,#111);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Фото 3</div>
+        <div style="height:160px;background:linear-gradient(135deg,#222,#141);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Фото 4</div>
+      </div>
+      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+        <button class="btn btn-ghost" onclick="closeViewer()">Закрыть</button>
+        <button class="btn btn-primary" onclick="saveFromViewer()">Сохранить подборку</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // AGE GATE logic
+    const ageGate = document.getElementById('ageGate');
+    const AGE_KEY = 'ld_age_ok';
+    function hideAgeGate() {
+      ageGate.style.display = 'none';
+      document.getElementById('mainContent').removeAttribute('aria-hidden');
+    }
+    function showAgeGate() {
+      ageGate.style.display = 'flex';
+      document.getElementById('mainContent').setAttribute('aria-hidden','true');
+    }
+    document.getElementById('ageYes').addEventListener('click', () => {
+      localStorage.setItem(AGE_KEY, '1');
+      hideAgeGate();
+    });
+    document.getElementById('ageNo').addEventListener('click', () => {
+      location.href = 'about:blank';
+    });
+    (function(){
+      try {
+        if(localStorage.getItem(AGE_KEY) === '1') {
+          hideAgeGate();
+        } else {
+          showAgeGate();
+        }
+      } catch(e){
+        showAgeGate();
+      }
+    })();
+
+    function scrollToSection(id){
+      const el = document.getElementById(id);
+      if(el) el.scrollIntoView({behavior:'smooth'});
+    }
+    function openPromo(){
+      alert('Для размещения рекламы напишите в Telegram: @Doctor2249');
+      scrollToSection('ads');
+    }
+    function openContact(){
+      scrollToSection('contact');
+    }
+
+    // viewer modal
+    const viewer = document.getElementById('viewerBackdrop');
+    function openViewer(title){
+      document.getElementById('viewerTitle').textContent = title;
+      viewer.style.display = 'flex';
+    }
+    function closeViewer(){
+      viewer.style.display = 'none';
+    }
+    function saveItem(title){
+      alert('Подборка "'+title+'" сохранена в закладки.');
+      try {
+        const key = 'ld_saved';
+        const arr = JSON.parse(localStorage.getItem(key) || '[]');
+        arr.push({title:title, at: new Date().toISOString()});
+        localStorage.setItem(key, JSON.stringify(arr));
+      } catch(e){}
+    }
+    function saveFromViewer(){
+      alert('Подборка сохранена.');
+    }
+
+    function applySort(mode){
+      if(mode === 'popular') alert('Сортировка: Популярное');
+    }
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') {
+        closeViewer();
+      }
+    });
+
+    // Prevent indexing
+    (function(){
+      const meta = document.createElement('meta');
+      meta.name = "robots"; meta.content = "noindex,nofollow";
+      document.head.appendChild(meta);
+    })();
+  </script>
+</body>
+</html>
